@@ -20,11 +20,20 @@ public class C08_SayininRakamlarToplaminiBulma {
         // rakamlar toplamiona ekleyelim
 
         birlerBasamagi=girilenSayi%10; // 7
+
+
         rakamlarToplami= rakamlarToplami+birlerBasamagi; // 0+7= 7
+
+
+
         girilenSayi=girilenSayi/10; // 245
 
         birlerBasamagi=girilenSayi%10; // 5
+
+
         rakamlarToplami=rakamlarToplami+birlerBasamagi; // 7 + 5 =12
+
+
         girilenSayi=girilenSayi/10; // 24
 
         birlerBasamagi= girilenSayi%10; // 4
