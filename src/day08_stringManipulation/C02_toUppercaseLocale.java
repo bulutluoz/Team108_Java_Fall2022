@@ -19,5 +19,6 @@ public class C02_toUppercaseLocale {
 
         str=str.toUpperCase(Locale.forLanguageTag("Tr"));
         System.out.println(str); // SEVGİ İNSANI HAYATA BAĞLAR
+
     }
 }
