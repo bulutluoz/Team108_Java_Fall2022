@@ -34,7 +34,7 @@ public class C09_FibonacciSerisi {
                 sayi2=sayi3;
 
             }
-
+            System.out.println("");
         }
 
 
