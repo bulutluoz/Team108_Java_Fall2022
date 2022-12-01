@@ -33,5 +33,21 @@ public class C05_WhileLoop {
                 break;
             }
         }
+
+
+        // ayni soruyu while loop ile yapalim
+        toplam=0;
+        sayi=0;
+
+        while (toplam<500){
+            System.out.println("toplamak uzere tamsayi giriniz");
+            sayi= scan.nextInt();
+
+            toplam += sayi;
+        }
+        System.out.println("Bu kadar sayi yeter. Toplamlari " + toplam + " oldu");
+
+
+
     }
 }

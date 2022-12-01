@@ -10,7 +10,7 @@ public class C06_Soru {
         // - sifre bosluk icermemeli
         // - uzunlugu en az 10 karakter olmali
 
-        String sifre= "abcjhhvj 1453";
+        String sifre= "ab 1453f";
 
         /*
            Bu soruda sartlari bagimsiz if cumlesi ile yapmak
