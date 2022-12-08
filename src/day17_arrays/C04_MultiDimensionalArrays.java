@@ -24,5 +24,11 @@ public class C04_MultiDimensionalArrays {
 
         System.out.println(arr[3][0]); // 2
 
+        // MDA'in tumunu yazdirmak isterseniz
+        // tek katli arrayleri yazdirmak icin kullandigimiz yontem yeterli olmaz
+
+        System.out.println(Arrays.toString(arr)); // [[I@e580929, [I@1cd072a9, [I@7c75222b, [I@2752f6e2, [I@4c203ea1]
+
+        System.out.println(Arrays.deepToString(arr)); // [[1, 2], [3, 4, 5], [6, 7, 4, 5], [2], [1, 2, 3, 4, 5]]
     }
 }
