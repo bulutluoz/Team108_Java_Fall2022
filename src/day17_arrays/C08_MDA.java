@@ -14,7 +14,7 @@ public class C08_MDA {
         // dinamik hale getirebilmek icin once inner array'lerden en kisa olani bulmamiz gerekir
 
 
-        int[][] arr =  {{3,4,5}, {2,3,6,7},{4}};
+        int[][] arr =  {{3,4,5}, {2,3,6,7}};
 
         int enKisaInnerArrayLength= arr[0].length;
 
@@ -28,6 +28,7 @@ public class C08_MDA {
 
         // ayni indexdeki elementleri topladigimizda koyacagimiz tek katli
         // bir array olusturalim
+        // {{3,4,5}, {2,3,6,7},{5,6};
 
         int[] toplamlarArrayi = new int[enKisaInnerArrayLength];
         int toplam=0;
