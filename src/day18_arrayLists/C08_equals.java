@@ -24,5 +24,7 @@ public class C08_equals {
         list3.add(10);
 
         System.out.println(list2.equals(list3)); // true
+
+
     }
 }
