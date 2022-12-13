@@ -27,7 +27,7 @@ public class C02_ArraydenListYapma {
 
             list1.add(arr[i]);
         }
-        System.out.println("loop ile tasinan list : " + list1);
+        System.out.println("loop ile tasinan list : " + list1); // [2, 3, 4, 6, 3, 4, 6, 1, 8, 5, 4]
 
 
 
