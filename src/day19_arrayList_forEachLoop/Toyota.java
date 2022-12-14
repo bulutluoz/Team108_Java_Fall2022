@@ -9,7 +9,7 @@ public class Toyota {
     String renk;
     // default constructor suna benzer
 
-    Toyota(){
+    public Toyota(){
         System.out.println("Toyota class'indaki cons. calisti");
     }
 
