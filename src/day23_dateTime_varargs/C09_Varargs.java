@@ -1,5 +1,9 @@
 package day23_dateTime_varargs;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class C09_Varargs {
 
     public static void main(String[] args) {
@@ -29,7 +33,6 @@ public class C09_Varargs {
                   Parametrelerin data turunun degismesi bu kurali etkilemez
 
          */
-
 
     }
     /*

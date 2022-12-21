@@ -16,6 +16,8 @@ public class C08_Varargs {
         islemYap(4); // 0
         islemYap(3,4,5,6); // 45
 
+        islemYap(2,4,5);
+
 
     }
 

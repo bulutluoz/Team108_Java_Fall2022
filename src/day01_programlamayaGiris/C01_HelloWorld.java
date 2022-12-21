@@ -13,6 +13,7 @@ public class C01_HelloWorld {
 
         */
         System.out.println("Bu da 3.satir olsun");
+        // Java'yi herkesin ogrenecegine team108 sahittir.
     }
 
 }
