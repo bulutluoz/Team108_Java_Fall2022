@@ -14,7 +14,26 @@ public class C05_Encapsulation {
 
             Java bu yetkilendirme islemini Encapsulation ile cozmustur.
 
+            Sadece yazma yetkisi icin setter()
+            Sadece okuma yetkisi icin getter()
+
+            Kodlarimizin daha anlasilir bir sekilde atama ve yazma islemlerini yapmasi icin de
+            getter() ve setter() method'lari birlikte kullanilabilir.
+            Bazi developer'lar boyle yapmayi tercih eder
 
          */
+
+        EncapsuleClass obj1= new EncapsuleClass();
+
+        obj1.setSatis(100);
+        obj1.setSatis(200);
+        obj1.setSatis(300);
+
+        System.out.println(obj1.getToplamSatis()); // 600
+
+        obj1.setHalkaAcikSayi(400);
+        System.out.println(obj1.getHalkaAcikSayi()); // 400
+
+
     }
 }
