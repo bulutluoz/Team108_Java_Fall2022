@@ -31,3 +31,7 @@ public abstract class DParent {
         System.out.println("Parent class'daki method 3 calisti");
     }
 }
+
+
+
+
