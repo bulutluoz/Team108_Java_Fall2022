@@ -28,5 +28,19 @@ public class N02_ListIterator {
         }
 
         System.out.println(sayilar);
+
+
+        // listedeki tum elementleri iterator kullanarak sondan basa dogru yazdirin
+
+        // bir ustteki loop ile sona gittigimiz icin iterator suan en sonda
+        // yani olmasini istedigimiz yerde
+
+        while (lit.hasPrevious()){
+
+            System.out.print(lit.previous() + " ");
+        }
+
+
+
     }
 }
