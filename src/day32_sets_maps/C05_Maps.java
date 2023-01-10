@@ -1,4 +1,4 @@
-package Day32_sets_maps;
+package day32_sets_maps;
 
 import java.util.HashMap;
 import java.util.Map;
