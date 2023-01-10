@@ -81,4 +81,46 @@ public class MapMethodDepo {
 
 
     }
+
+    public static void sinifListesiYazdirma(Map<Integer, String> ogrenciMap, String sinif, String sube) {
+
+        Collection<String> valueCollection= ogrenciMap.values();
+
+        System.out.println("Isim   Soyisim");
+
+        for (String eachValue:valueCollection
+             ) {
+
+            String[] valueArr= eachValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            if (valueArr[2].equalsIgnoreCase(sinif) && valueArr[3].equalsIgnoreCase(sube)){
+
+                System.out.println(valueArr[0] + "  "+ valueArr[1]);
+            }
+        }
+    }
+
+    public static Map<Integer, String> numaraIleSubeDegistirme(Map<Integer, String> ogrenciMap, int okulNo, String yeniSubeIsmi) {
+
+        // 1- okul numarasini biliyoruz, direk ogrenci value'ye ulasabiliriz
+
+        String ogrenciValue= ogrenciMap.get(okulNo); // Ayse-Can-10-H-MF
+
+        String[] valueArr= ogrenciValue.split("-"); // [Ayse, Can, 10, H, MF]
+
+        // 2- sube ismini guncelleyelim
+
+        valueArr[3]=yeniSubeIsmi; //  [Ayse, Can, 10, M, MF]
+
+        // 3- array'deki guncel bilgileri yeniden value formatinda bir String yapalim
+
+        String yeniValue= valueArr[0]+"-"+valueArr[1]+"-"+valueArr[2]+"-"+
+                            valueArr[3]+"-"+valueArr[4];
+
+        // 4- ogrenci no yani key ile yeni value'yu map'e ekleyelim
+
+        ogrenciMap.put(okulNo,yeniValue);
+
+        return ogrenciMap;
+    }
 }
