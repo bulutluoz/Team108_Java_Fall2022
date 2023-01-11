@@ -156,4 +156,35 @@ public class MapMethodDepo {
         }
 
     }
+
+    public static void bolumListesiOlusturma(Map<Integer, String> ogrenciMap, String bolum) {
+        // verilen bolumdeki ogrencilerin
+        // No, isim soyisim ve siniflarini yazdiran
+        // bir method olusturun
+
+        System.out.println("No isim soyisim sinif");
+        System.out.println("=====================");
+
+        Set<Map.Entry<Integer, String>> entrySeti = ogrenciMap.entrySet();
+
+        for (Map.Entry<Integer,String> eachEntry: entrySeti
+             ) {
+
+            String entryValue= eachEntry.getValue();
+
+            String[] entryValueArr= entryValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            if (entryValueArr[4].equalsIgnoreCase(bolum)){
+
+                System.out.println(eachEntry.getKey()+" " +
+                                   entryValueArr[0]+" "+
+                                   entryValueArr[1]+" " +
+                                   entryValueArr[2]);
+
+            }
+
+
+        }
+
+    }
 }
