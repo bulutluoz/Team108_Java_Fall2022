@@ -1,9 +1,6 @@
 package day32_sets_maps;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class MapMethodDepo {
 
@@ -268,5 +265,44 @@ public class MapMethodDepo {
 
         }
         return ogrenciMap;
+    }
+
+    public static void sinifSiraliListeYazdir(Map<Integer, String> ogrenciMap) {
+        // 101=Ali-Can-11-H-MF
+        // 11 H Ali Can 101
+
+        // tum ogrenci listesini
+        // sinif sube isim soyisim no seklinde
+        // dogal sirali olarak
+        // Yazdiran bir method olusturun
+
+        Set<Map.Entry<Integer, String>> entrySeti= ogrenciMap.entrySet();
+        Set<String> siraliOgrenciSeti= new TreeSet<>();
+
+        for (Map.Entry<Integer, String> eachEntry : entrySeti) {
+
+            String entryValue=eachEntry.getValue(); // Ali-Can-11-H-MF
+
+            String[] entryValueArr= entryValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // Entry'den istenen bilgileri alip yeni bir String olusturacagiz
+            // ve bu String'leri sirali olarak yazdiracagiz
+
+            String istenenFormattakiBilgi= entryValueArr[2]+" "+
+                                            entryValueArr[3]+" "+
+                                            entryValueArr[0]+" "+
+                                            entryValueArr[1]+" "+
+                                            eachEntry.getKey();
+
+            siraliOgrenciSeti.add(istenenFormattakiBilgi);
+        }
+
+        System.out.println("sinif sube isim soyisim no");
+        System.out.println("==========================");
+
+        for (String each : siraliOgrenciSeti) {
+            System.out.println(each);
+        }
+
     }
 }
