@@ -209,6 +209,7 @@ public class MapMethodDepo {
             // 6- degisikligi yaptiktan sonra yeniden birlestirmeleri yapip
             //    map'i update etmeliyiz
 
+
             // 7- setValue() kullanarak value'yu yeni haline update edelim
 
             eachEntry.setValue(entryValueArr[0]+"-"+
@@ -231,5 +232,41 @@ public class MapMethodDepo {
         ) {
             System.out.println(eachEntry);
         }
+    }
+
+    public static Map<Integer, String> siniflariArtir(Map<Integer, String> ogrenciMap) {
+
+        // map'de istedigimiz degisikligi yaptiktan sonra
+        // map'i update etmenin en kolay yolu setEntry()
+
+        Set<Map.Entry<Integer, String>> entrySeti = ogrenciMap.entrySet();
+
+        for (Map.Entry<Integer, String> eachEntry : entrySeti) { // 101=Ali-Can-11-H-MF
+
+            String entryValue=eachEntry.getValue(); // Ali-Can-11-H-MF
+
+            String[] entryValueArr = entryValue.split("-"); // [Ali, CAN, 11, H, MF]
+
+            int sinifInt= Integer.parseInt(entryValueArr[2]);
+
+            if (sinifInt==12){
+
+                entryValueArr[2]="Mezun";
+            }else{
+
+                entryValueArr[2]=sinifInt+1+"";
+            }
+
+            // sinif bilgisini guncelledik
+            // bu guncellemeyi map'e islememiz lazim
+
+            eachEntry.setValue(entryValueArr[0]+"-"+
+                                entryValueArr[1]+"-"+
+                                entryValueArr[2]+"-"+
+                                entryValueArr[3]+"-"+
+                                entryValueArr[4]);
+
+        }
+        return ogrenciMap;
     }
 }
