@@ -187,4 +187,49 @@ public class MapMethodDepo {
         }
 
     }
+
+    public static Map<Integer, String> soyisimleriBuyukHarfYap(Map<Integer, String> ogrenciMap) {
+        // soyisimleri buyuk harf yapalim
+        // 1- entrySet olusturalim
+
+        Set<Map.Entry<Integer, String>> entrySeti= ogrenciMap.entrySet();
+
+        // 2- foreach loop ile her bir entry'yi elden gecirip, soyisimleri buyuk harf yapalim
+
+        for (Map.Entry<Integer, String> eachEntry : entrySeti) {
+
+            // 3- entry'den value'yu alalim
+            String entryValue= eachEntry.getValue(); // Ali-Can-11-H-MF
+            // 4- soyisim bilgisine ulasip degistirebilmek icin parcala
+            String[] entryValueArr= entryValue.split("-"); // [Ali, Can, 11, H, MF]
+            // 5- Soyisimi buyuk harf yapalim
+
+            entryValueArr[1]= entryValueArr[1].toUpperCase(); // // [Ali, CAN, 11, H, MF]
+
+            // 6- degisikligi yaptiktan sonra yeniden birlestirmeleri yapip
+            //    map'i update etmeliyiz
+
+            // 7- setValue() kullanarak value'yu yeni haline update edelim
+
+            eachEntry.setValue(entryValueArr[0]+"-"+
+                               entryValueArr[1]+"-"+
+                               entryValueArr[2]+"-"+
+                               entryValueArr[3]+"-"+
+                               entryValueArr[4]);
+
+        }
+        return ogrenciMap;
+    }
+
+    public static void tumListeYazdir(Map<Integer, String> ogrenciMap) {
+
+        Set<Map.Entry<Integer,String>> ogrenciEntrySet=ogrenciMap.entrySet();
+        System.out.println("No   Ogrenci Bilgileri");
+        System.out.println("======================");
+
+        for (Map.Entry<Integer,String> eachEntry: ogrenciEntrySet
+        ) {
+            System.out.println(eachEntry);
+        }
+    }
 }
