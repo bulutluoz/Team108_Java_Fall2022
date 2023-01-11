@@ -14,5 +14,6 @@ public class C09_NumaraIleSubeGuncelleme {
         ogrenciMap=MapMethodDepo.numaraIleSubeDegistirme(ogrenciMap,101,"L");
 
         System.out.println(ogrenciMap);
+
     }
 }
