@@ -305,4 +305,39 @@ public class MapMethodDepo {
         }
 
     }
+
+    public static void isimSoyisimSiraliListeYazdir(Map<Integer, String> ogrenciMap) {
+
+        // tum ogrenci listesini isim soyisim no sinif sube bolum
+
+        Set<Map.Entry<Integer, String>> entrySeti = ogrenciMap.entrySet();
+        Set<String> isimSoyisimSiraliSet= new TreeSet<>();
+
+        for (Map.Entry<Integer, String> eachEntry : entrySeti) {
+
+            String value= eachEntry.getValue();
+
+            String[] valueArr=value.split("-"); // [Ali, Can, 11, H, MF]
+
+            String istenenFormattakiBilgi= valueArr[0]+" "+
+                                            valueArr[1]+" "+
+                                            eachEntry.getKey()+" "+
+                                            valueArr[2]+" "+
+                                            valueArr[3]+" "+
+                                            valueArr[4];
+            isimSoyisimSiraliSet.add(istenenFormattakiBilgi);
+
+
+        }
+
+        // sirali set'i yazdiralim
+        System.out.println("isim soyisim no sinif sube bolum");
+        System.out.println("================================");
+
+        for (String each : isimSoyisimSiraliSet) {
+            System.out.println(each);
+        }
+
+
+    }
 }
