@@ -32,7 +32,7 @@ public class C02_EntrySet {
         /*
           Aslinda bizden istenen Map'in icindeki elementler
           Java map'deki elementleri key-value ikilisi olarak BIRLIKTE alabilmemiz icin
-          ENTRY class'i olusturmustur.
+          ENTRY interface'i olusturmustur.
 
           entry'ler de map ile ayni data yapisina sahip olmalidir
           ornegin ogrenci map'ini dusunursek entry'ler
