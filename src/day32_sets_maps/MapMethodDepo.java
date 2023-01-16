@@ -346,7 +346,7 @@ public class MapMethodDepo {
             String no=duzenliYazdirArr[2];
             String bolum=duzenliYazdirArr[5];
 
-            System.out.printf("%-6.6s %-6.6s %3s  %2s    %s    %s%n",isim,soyisim,no,sinif,sube,bolum);
+            System.out.printf("%-6.6s %-6.6S %3s  %2s    %s    %s%n",isim,soyisim,no,sinif,sube,bolum);
         }
 
 
